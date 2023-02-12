@@ -2,6 +2,7 @@ import { createApp } from 'vue';
 import { createPinia } from 'pinia';
 import { VueQueryPlugin } from 'vue-query';
 import { createI18n } from 'vue-i18n';
+import { MotionPlugin } from '@vueuse/motion';
 
 import App from './App.vue';
 import router from './router';
@@ -26,4 +27,5 @@ app.use(createPinia());
 app.use(router);
 app.use(VueQueryPlugin);
 app.use(i18n);
+app.use(MotionPlugin);
 app.mount('#app');

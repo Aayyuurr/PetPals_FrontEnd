@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-	import dogTemp from '../components/dogTemp.vue';
+	import dogTemp from '../components/logosAndAssets/dogTemp.vue';
 </script>
 
 <template>
@@ -7,11 +7,11 @@
 		<div>
 			<dogTemp />
 		</div>
-		<div>
+		<div v-motion-roll-visible-once-left>
 			<h1 class="font-clashDisplay font-bold text-3xl">{{ $t('index.welcome') }}</h1>
 			<p class="font-satoshi font-medium test-lg">{{ $t('index.description') }}</p>
 		</div>
-		<div class="flex flex-col gap-3 font-satoshi font-normal">
+		<div class="flex flex-col gap-3 font-satoshi font-normal" v-motion-roll-visible-once-left>
 			<router-link to="/login" class="w-72 h-8 bg-red-200 flex justify-center items-center rounded-lg drop-shadow-md">{{
 				$t('message.Login')
 			}}</router-link>
