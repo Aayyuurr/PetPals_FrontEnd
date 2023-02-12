@@ -1,31 +1,15 @@
 <script setup lang="ts">
 	import { RouterView } from 'vue-router';
+	import changeLang from '@/components/changLang.vue';
 </script>
 
 <template>
-	<div class="parent h-screen">
-		<div class="hidden">azeaze</div>
-		<div class=""><RouterView /></div>
-		<div class="hidden">azeazeazdqdqs</div>
+	<div class="h-screen w-screen lg:flex lg:flex-col">
+		<div class="hidden lg:block lg:w-screen lg:h-1/5">
+			<changeLang />
+		</div>
+		<div class="lg:h-4/5"><RouterView /></div>
 	</div>
 </template>
 
-<style scoped>
-	.parent {
-		display: grid;
-		grid-template-columns: repeat(6, 1fr);
-		grid-template-rows: repeat(5, 1fr);
-		grid-column-gap: 0px;
-		grid-row-gap: 0px;
-	}
-
-	.div1 {
-		grid-area: 1 / 6 / 6 / 7;
-	}
-	.div2 {
-		grid-area: 1 / 1 / 6 / 2;
-	}
-	.div3 {
-		grid-area: 1 / 2 / 6 / 6;
-	}
-</style>
+<style scoped></style>

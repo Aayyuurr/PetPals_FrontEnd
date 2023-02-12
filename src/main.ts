@@ -12,7 +12,7 @@ import { fr } from '@/languages/french';
 
 import './assets/main.css';
 
-const i18n = createI18n({
+export const i18n = createI18n({
 	locale: 'fr',
 	fallbackLocale: 'en',
 	messages: {

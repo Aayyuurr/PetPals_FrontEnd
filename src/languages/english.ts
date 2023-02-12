@@ -18,6 +18,7 @@ export const en = {
 		'Confirm Password': 'Confirm Password',
 	},
 	index: {
+		langue: 'English',
 		welcome: 'Welcome to PetPals',
 		description:
 			'Join PetPals, the platform for finding the perfect partner for your animal during its heat period and for adopting or selling animals.',

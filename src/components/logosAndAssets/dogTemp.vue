@@ -1,5 +1,5 @@
 <template>
-	<div class='w-60 '>
+	<div class='w-60 lg:w-96'>
 		<svg
 			class="animated"
 			id="freepik_stories-dog-paw"
