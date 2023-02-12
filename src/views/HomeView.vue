@@ -10,24 +10,24 @@
 		<div class="flex flex-col items-center gap-2 md:w-2/4">
 			<div v-motion-slide-left>
 				<h1 class="font-clashDisplay font-bold text-3xl lg:text-5xl">{{ $t('index.welcome') }}</h1>
-				<p class="font-satoshi font-medium text-lg my-2 lg:text-2xl">{{ $t('index.description') }}</p>
+				<p class="font-satoshi font-medium text-lg my-2 lg:text-2xl lg:mt-5">{{ $t('index.description') }}</p>
 			</div>
-			<div class="flex flex-col gap-3 font-satoshi font-normal" v-motion-slide-left>
+			<div class="flex flex-col gap-3 font-satoshi font-normal lg:mt-14 lg:gap-5" v-motion-slide-left>
 				<router-link
 					to="/login"
-					class="w-72 h-8 bg-red-200 flex justify-center items-center rounded-lg drop-shadow-md lg:w-80 lg:h-10 lg:hover:bg-red-400"
+					class="w-72 h-8 bg-red-200 flex justify-center items-center rounded-lg drop-shadow-md lg:w-80 lg:h-10 lg:hover:bg-red-400 lg:transition lg:duration-500 lg:hover:text-white"
 					>{{ $t('message.Login') }}</router-link
 				>
 
 				<router-link
 					to="/register"
-					class="w-72 h-8 bg-red-300 text-center flex justify-center items-center rounded-md drop-shadow-md lg:w-80 lg:h-10 lg:hover:bg-red-500"
+					class="w-72 h-8 bg-red-300 text-center flex justify-center items-center rounded-md drop-shadow-md lg:w-80 lg:h-10 lg:hover:bg-red-500 lg:transition lg:duration-500 lg:hover:text-white"
 					>{{ $t('message.Register') }}</router-link
 				>
 
 				<router-link
 					to="/market"
-					class="w-72 h-8 bg-blue-200 flex justify-center items-center rounded-lg drop-shadow-md lg:w-80 lg:h-10 lg:hover:bg-blue-400"
+					class="w-72 h-8 bg-blue-200 flex justify-center items-center rounded-lg drop-shadow-md lg:w-80 lg:h-10 lg:hover:bg-blue-400 lg:transition lg:duration-500 lg:hover:text-white"
 					>{{ $t('message.marketplace') }}</router-link
 				>
 			</div>

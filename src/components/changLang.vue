@@ -17,18 +17,18 @@
 </script>
 
 <template>
-	<div class="flex flex-col items-end mr-20">
-		<div @click="toggle" class='hover: cursor-pointer' >
+	<div class="flex flex-col items-end mr-20 ">
+		<div @click="toggle" class="hover: cursor-pointer">
 			<span class="flex flex-row justify-center items-center font-satoshi font-semibold"
 				>{{ $t('index.langue') }}<dropDownIcon
 			/></span>
 		</div>
-		<div v-if="showlang" class="flex flex-col gap-1 font-satoshi font-medium w-28">
+		<div v-if="showlang" class="flex flex-col gap-1 font-satoshi font-medium w-28 transition duration-1000">
 			<button
 				v-for="l in langs"
 				:key="l"
 				@click="setLangue(l)"
-				:class="{ 'text-blue-400': l === store.language }"
+				:class="{ 'text-blue-400': l === store.language, 'hover:text-blue-400': true, 'transition duration-300': true}"
 			>
 				{{ fullLangs[langs.indexOf(l)] }}
 			</button>
