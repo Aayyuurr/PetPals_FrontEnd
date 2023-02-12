@@ -1,9 +1,11 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+	import dogTemp from '../components/dogTemp.vue';
+</script>
 
 <template>
 	<div class="h-screen w-screen flex flex-col items-center bg-white text-center justify-evenly">
 		<div>
-			<img class="w-60" alt="" src="../assets/dog-paw-animate.svg" />
+			<dogTemp />
 		</div>
 		<div>
 			<h1 class="font-clashDisplay font-bold text-3xl">{{ $t('index.welcome') }}</h1>
