@@ -1,0 +1,120 @@
+@font-face {
+	font-family: 'Satoshi';
+	src: url('../../public/font/satoshi/Satoshi-Regular.ttf') format('truetype'),
+		url('../../public/font/satoshi/Satoshi-Regular.woff') format('woff'),
+		url('../../public/font/satoshi/Satoshi-Regular.woff2') format('woff2'),
+		url('../../public/font/satoshi/Satoshi-Regular.eot') format('eot');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Satoshi';
+    src: url('../../public/font/satoshi/Satoshi-Bold.ttf') format('truetype'),
+        url('../../public/font/satoshi/Satoshi-Bold.woff') format('woff'),
+        url('../../public/font/satoshi/Satoshi-Bold.woff2') format('woff2'),
+        url('../../public/font/satoshi/Satoshi-Bold.eot') format('eot');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+   font-family: 'Satoshi';
+
+    src: url('../../public/font/satoshi/Satoshi-Medium.ttf') format('truetype'),
+            url('../../public/font/satoshi/Satoshi-Medium.woff') format('woff'),
+            url('../../public/font/satoshi/Satoshi-Medium.woff2') format('woff2'),
+            url('../../public/font/satoshi/Satoshi-Medium.eot') format('eot');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Satoshi';
+    src: url('../../public/font/satoshi/Satoshi-Light.ttf') format('truetype'),
+        url('../../public/font/satoshi/Satoshi-Light.woff') format('woff'),
+        url('../../public/font/satoshi/Satoshi-Light.woff2') format('woff2'),
+        url('../../public/font/satoshi/Satoshi-Light.eot') format('eot');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('../../public/font/satoshi/Satoshi-Black.ttf') format('truetype'),
+        url('../../public/font/satoshi/Satoshi-Black.woff') format('woff'),
+        url('../../public/font/satoshi/Satoshi-Black.woff2') format('woff2'),
+        url('../../public/font/satoshi/Satoshi-Black.eot') format('eot');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/*clashDisplay*/
+/*extra light*/
+@font-face {
+    font-family: 'ClashDisplay';
+    src: url('../../public/font/clashDisplay/ClashDisplay-ExtraLight.ttf') format('truetype'),
+        url('../../public/font/clashDisplay/ClashDisplay-ExtraLight.woff') format('woff'),
+        url('../../public/font/clashDisplay/ClashDisplay-ExtraLight.woff2') format('woff2'),
+        url('../../public/font/clashDisplay/ClashDisplay-ExtraLight.eot') format('eot');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+/*ligh*/
+@font-face {
+    font-family: 'ClashDisplay';
+    src: url('../../public/font/clashDisplay/ClashDisplay-Light.ttf') format('truetype'),
+        url('../../public/font/clashDisplay/ClashDisplay-Light.woff') format('woff'),
+        url('../../public/font/clashDisplay/ClashDisplay-Light.woff2') format('woff2'),
+        url('../../public/font/clashDisplay/ClashDisplay-Light.eot') format('eot');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+/*regular*/
+@font-face {
+    font-family: 'ClashDisplay';
+    src: url('../../public/font/clashDisplay/ClashDisplay-Regular.ttf') format('truetype'),
+        url('../../public/font/clashDisplay/ClashDisplay-Regular.woff') format('woff'),
+        url('../../public/font/clashDisplay/ClashDisplay-Regular.woff2') format('woff2'),
+        url('../../public/font/clashDisplay/ClashDisplay-Regular.eot') format('eot');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+/*medium*/
+@font-face {
+    font-family: 'ClashDisplay';
+    src: url('../../public/font/clashDisplay/ClashDisplay-Medium.ttf') format('truetype'),
+        url('../../public/font/clashDisplay/ClashDisplay-Medium.woff') format('woff'),
+        url('../../public/font/clashDisplay/ClashDisplay-Medium.woff2') format('woff2'),
+        url('../../public/font/clashDisplay/ClashDisplay-Medium.eot') format('eot');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+/*semi bold*/
+@font-face {
+    font-family: 'ClashDisplay';
+    src: url('../../public/font/clashDisplay/ClashDisplay-SemiBold.ttf') format('truetype'),
+        url('../../public/font/clashDisplay/ClashDisplay-SemiBold.woff') format('woff'),
+        url('../../public/font/clashDisplay/ClashDisplay-SemiBold.woff2') format('woff2'),
+        url('../../public/font/clashDisplay/ClashDisplay-SemiBold.eot') format('eot');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+/*bold*/
+@font-face {
+    font-family: 'ClashDisplay';
+    src: url('../../public/font/clashDisplay/ClashDisplay-Bold.ttf') format('truetype'),
+        url('../../public/font/clashDisplay/ClashDisplay-Bold.woff') format('woff'),
+        url('../../public/font/clashDisplay/ClashDisplay-Bold.woff2') format('woff2'),
+        url('../../public/font/clashDisplay/ClashDisplay-Bold.eot') format('eot');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
