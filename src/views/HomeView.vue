@@ -7,11 +7,11 @@
 		<div>
 			<dogTemp />
 		</div>
-		<div v-motion-roll-visible-once-left>
+		<div v-motion-slide-left>
 			<h1 class="font-clashDisplay font-bold text-3xl">{{ $t('index.welcome') }}</h1>
 			<p class="font-satoshi font-medium test-lg">{{ $t('index.description') }}</p>
 		</div>
-		<div class="flex flex-col gap-3 font-satoshi font-normal" v-motion-roll-visible-once-left>
+		<div class="flex flex-col gap-3 font-satoshi font-normal" v-motion-slide-left>
 			<router-link to="/login" class="w-72 h-8 bg-red-200 flex justify-center items-center rounded-lg drop-shadow-md">{{
 				$t('message.Login')
 			}}</router-link>
