@@ -1,5 +1,6 @@
 export const ar = {
 	message: {
+		'ou': 'أو',
 		'Edit': 'تعديل',
 		'Save': 'حفظ',
 		'Cancel': 'إلغاء',
@@ -16,11 +17,18 @@ export const ar = {
 		'Email': 'البريد الإلكتروني',
 		'Password': 'كلمه السر',
 		'Confirm Password': 'تأكيد كلمة المرور',
+		'loginWith': 'تسجيل الدخول مع {0}',
 	},
 	index: {
 		langue: 'العربية',
 		welcome: 'مرحبا بكم في PetPals',
 		description:
 			'انضم إلى بيت بالز، المنصة للعثور على شريك أصحاب الحيوانات المثالي خلال فترة حرارتهاولتبني أو بيع الحيوانات.',
+	},
+	login: {
+		name: 'PetPals',
+		bonjour: 'مرحبا!',
+		bvnText: 'قم بتسجيل الدخول لاكتشاف جميع ميزاتنا.',
+		emailIsNotValid: 'البريد الإلكتروني غير صالح',
 	},
 };

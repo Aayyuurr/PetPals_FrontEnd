@@ -1,5 +1,6 @@
 export const en = {
 	message: {
+		'ou': 'Or',
 		'Edit': 'Edit',
 		'Save': 'Save',
 		'Cancel': 'Cancel',
@@ -16,11 +17,18 @@ export const en = {
 		'Email': 'Email',
 		'Password': 'Password',
 		'Confirm Password': 'Confirm Password',
+		'loginWith': 'Login with {0}',
 	},
 	index: {
 		langue: 'English',
 		welcome: 'Welcome to PetPals',
 		description:
 			'Join PetPals, the platform for finding the perfect partner for your animal during its heat period and for adopting or selling animals.',
+	},
+	login: {
+		name: 'PetPals',
+		bonjour: 'Welcome !',
+		bvnText: 'Log in to discover all our features.',
+		emailIsNotValid: 'Email is not valid',
 	},
 };

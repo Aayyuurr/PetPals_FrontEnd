@@ -15,19 +15,19 @@
 			<div class="flex flex-col gap-3 font-satoshi font-normal lg:mt-14 lg:gap-5" v-motion-slide-left>
 				<router-link
 					to="/login"
-					class="w-72 h-8 bg-red-200 flex justify-center items-center rounded-lg drop-shadow-md lg:w-80 lg:h-10 lg:hover:bg-red-400 lg:transition lg:duration-500 lg:hover:text-white"
+					class="w-72 h-8 bg-red-200 flex justify-center items-center rounded-lg drop-shadow-md lg:w-80 lg:h-10 lg:hover:bg-red-400 lg:transition lg:duration-500 lg:hover:text-white lg:ease-in-out lg:delay-150 lg:hover:-translate-y-1 lg:hover:scale-110"
 					>{{ $t('message.Login') }}</router-link
 				>
 
 				<router-link
 					to="/register"
-					class="w-72 h-8 bg-red-300 text-center flex justify-center items-center rounded-md drop-shadow-md lg:w-80 lg:h-10 lg:hover:bg-red-500 lg:transition lg:duration-500 lg:hover:text-white"
+					class="w-72 h-8 bg-red-300 text-center flex justify-center items-center rounded-md drop-shadow-md lg:w-80 lg:h-10 lg:hover:bg-red-500 lg:transition lg:duration-500 lg:hover:text-white lg:ease-in-out lg:delay-150 lg:hover:-translate-y-1 lg:hover:scale-110"
 					>{{ $t('message.Register') }}</router-link
 				>
 
 				<router-link
 					to="/market"
-					class="w-72 h-8 bg-blue-200 flex justify-center items-center rounded-lg drop-shadow-md lg:w-80 lg:h-10 lg:hover:bg-blue-400 lg:transition lg:duration-500 lg:hover:text-white"
+					class="w-72 h-8 bg-blue-200 flex justify-center items-center rounded-lg drop-shadow-md lg:w-80 lg:h-10 lg:hover:bg-blue-400 lg:transition lg:duration-500 lg:hover:text-white lg:ease-in-out lg:delay-150 lg:hover:-translate-y-1 lg:hover:scale-110"
 					>{{ $t('message.marketplace') }}</router-link
 				>
 			</div>
