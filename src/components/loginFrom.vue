@@ -37,24 +37,33 @@
 		},
 	});
 
-	function OnConnextion(values: Ilogin) {
-		console.log(values)
+	function onConnextion(values:any) {
 		mutate(values);
 	}
 </script>
 
 <template>
 	<div class="flex justify-center items-center font-satoshi font-normal p-2">
-		<Form @submit="OnConnextion" :validation-schema="validationSchema"  class="flex flex-col gap-2">
+		<Form @submit="onConnextion" :validation-schema="validationSchema" class="flex flex-col gap-2">
 			<div class="">
 				<label for="email" class="block text-ct-blue-600 mb-3 lg:text-lg">{{ $t('message.Email') }}</label>
-				<Field type="email" placeholder=" " class="block w-72 h-8 rounded-lg border lg:w-80 lg:h-10  lg:text-xl" name="email" />
-				<ErrorMessage class="text-red-500 text-xs pt-1 block lg:text-sm " name="email" />
+				<Field
+					type="email"
+					placeholder=" "
+					class="block w-72 h-8 rounded-lg border lg:w-80 lg:h-10 lg:text-xl"
+					name="email"
+				/>
+				<ErrorMessage class="text-red-500 text-xs pt-1 block lg:text-sm" name="email" />
 			</div>
 			<div class="">
 				<label for="password" class="block text-ct-blue-600 mb-3 lg:text-lg">{{ $t('message.Password') }}</label>
-				<Field type="password" placeholder=" " class="block w-72 h-8 rounded-lg border lg:w-80 lg:h-10 lg:text-xl" name="password" />
-				<ErrorMessage class="text-red-500 text-xs pt-1 block lg:text-sm " name="password" />
+				<Field
+					type="password"
+					placeholder=" "
+					class="block w-72 h-8 rounded-lg border lg:w-80 lg:h-10 lg:text-xl"
+					name="password"
+				/>
+				<ErrorMessage class="text-red-500 text-xs pt-1 block lg:text-sm" name="password" />
 			</div>
 			<div class="text-right test-2xl">
 				<a href="" class="">{{ $t('login.forgotPassword') }}</a>
