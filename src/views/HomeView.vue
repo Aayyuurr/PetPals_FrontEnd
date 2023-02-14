@@ -9,7 +9,9 @@
 		</div>
 		<div class="flex flex-col items-center gap-2 md:w-2/4">
 			<div v-motion-slide-left>
-				<h1 class="font-clashDisplay font-bold text-3xl lg:text-5xl">{{ $t('index.welcome') }}</h1>
+				<h1 class="font-clashDisplay font-bold text-3xl lg:text-5xl">
+					{{ $t('index.welcome') }} <span class="text-green-600">Pet</span><span class="text-red-300">Pals</span>
+				</h1>
 				<p class="font-satoshi font-medium my-2 lg:text-2xl lg:mt-5">{{ $t('index.description') }}</p>
 			</div>
 			<div class="flex flex-col gap-3 font-satoshi font-normal lg:mt-14 lg:gap-5" v-motion-slide-left>

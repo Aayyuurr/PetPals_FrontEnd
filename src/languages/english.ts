@@ -21,7 +21,7 @@ export const en = {
 	},
 	index: {
 		langue: 'English',
-		welcome: 'Welcome to PetPals',
+		welcome: 'Welcome to ',
 		description:
 			'Join PetPals, the platform for finding the perfect partner for your animal during its heat period and for adopting or selling animals.',
 	},
@@ -30,5 +30,9 @@ export const en = {
 		bonjour: 'Welcome !',
 		bvnText: 'Log in to discover all our features.',
 		emailIsNotValid: 'Email is not valid',
+		needAccount: 'Want to join us ?',
+		singUpHere: 'Create an account',
+		forgotPassword: 'Forgot password ?',
+		Login: 'Sign in',
 	},
 };

@@ -14,14 +14,14 @@ export const fr = {
 		'Logout': 'Déconnexion',
 		'Register': 'Créer un compte',
 		'marketplace': 'Accéder au marketplace',
-		'Email': 'Email',
+		'Email': 'E-mail',
 		'Password': 'Mot de passe',
 		'Confirm Password': 'Confirmer le mot de passe',
 		'loginWith': 'Se connecter avec {0}',
 	},
 	index: {
 		langue: 'Français',
-		welcome: 'Bienvenue sur PetPals',
+		welcome: 'Bienvenue sur ',
 		description:
 			'Rejoignez PetPals, la plateforme pour trouver le partenaire idéal pour votre animal en période de chaleur et pour adopter ou vendre des animaux',
 	},
@@ -30,5 +30,9 @@ export const fr = {
 		bonjour: 'Bonjour !',
 		bvnText: 'Connectez-vous pour découvrir toutes nos fonctionnalités.',
 		emailIsNotValid: "L'email n'est pas valide",
+		needAccount: 'Envie de nous rejoindre ?',
+		singUpHere: 'Créer un compte',
+		forgotPassword: 'Mot de passe oublié ?',
+		Login: 'Se connecter',
 	},
 };
