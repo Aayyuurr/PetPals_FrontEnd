@@ -1,5 +1,5 @@
 import axios from 'axios';
-const basUrl = 'http://45.76.46.129/api/';
+const basUrl = 'https://api.pet-pals.site/api/'
 
 const authApi = axios.create({
 	baseURL: basUrl,
