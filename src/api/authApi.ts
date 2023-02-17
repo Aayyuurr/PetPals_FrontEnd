@@ -7,7 +7,7 @@ const basUrl = 'https://api.pet-pals.site/api/';
 export const authApi = axios.create({
 	baseURL: basUrl,
 	timeout: 10000,
-	withCredentials: true,
+	// withCredentials: true,
 });
 authApi.defaults.headers.common['Content-Type'] = 'application/json';
 authApi.defaults.headers.common['Accept'] = 'application/json';
@@ -28,8 +28,8 @@ export const getCSRFToken = async () => {
 //login function
 export const loginUser = async (user: loginData) => {
 	//get CSRF token from csrf-cookie and give it to the login request
-	// await getCSRFToken();
-	const data=await authApi.post<loginData>('auth/login', user);
+	await getCSRFToken();
+	const data=await authApi.post('auth/login', user);
 
 	return data;
 
@@ -49,8 +49,14 @@ export const googleLoginUser = async () => {
 //register function
 export const registerUser = async (user: registerData) => {
 	await getCSRFToken();
-	const data=await authApi.post<registerData>('auth/register', user);
+	const data=await authApi.post('auth/register', user);
 
+	return data;
+
+}
+
+export const getUser = async () => {
+	const data=await authApi.get('user');
 	return data;
 
 }

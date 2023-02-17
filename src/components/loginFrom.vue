@@ -5,11 +5,12 @@
 	import { Form, Field, ErrorMessage } from 'vee-validate';
 	import type { loginData } from '../api/types';
 	//importation pour le login
-	import { loginUser } from '../api/authApi';
+	import { loginUser, getUser } from '../api/authApi';
 	import router from '../router';
 	import { useQueryClient } from 'vue-query';
 	import { useMutation, useQuery } from 'vue-query';
 	import { authApi } from '../api/authApi';
+	import * as domain from 'domain';
 	// data validation
 	const validationSchema = toFormValidator(
 		zod.object({
@@ -17,20 +18,24 @@
 			password: zod.string().min(6, 'Mot de passe doit être au moins 6 caractères').min(1, 'Mot de passe est requis'),
 		})
 	);
-	// const { handleSubmit, errors, resetForm } = useForm({
-	// 	validationSchema: validationSchema,
-	// });
-	// const { value: email } = useField('email');
-	// const { value: password } = useField('password');
+	//get user
+	const GetUser =useQuery('user',()=>getUser(),{
+		enabled: false,
+		retry:1,
+		onSuccess: (data) => {
+			console.log(data);
+		},
+		onError: (error) => {
+			console.log(error);
+		},
+	});
+
 
 	//login function
 	const queryClient = useQueryClient();
 	const { isLoading, mutate } = useMutation((credentials: loginData) => loginUser(credentials), {
 		onSuccess: (data) => {
-			// console.log(data.data?.data.token);
-			//add token to local cookie
-			// authApi.common.headers.Authorization = `Bearer ${data.data.data.token}`;
-			// document.cookie.set('token', data.data.data.token);
+
 
 
 			router.push('/market');
