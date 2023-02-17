@@ -27,10 +27,10 @@
 	const queryClient = useQueryClient();
 	const { isLoading, mutate } = useMutation((credentials: loginData) => loginUser(credentials), {
 		onSuccess: (data) => {
-			console.log(data.data.data.token);
+			// console.log(data.data?.data.token);
 			//add token to local cookie
-			authApi.common.headers.Authorization = `Bearer ${data.data.data.token}`;
-			document.cookie.set('token', data.data.data.token);
+			// authApi.common.headers.Authorization = `Bearer ${data.data.data.token}`;
+			// document.cookie.set('token', data.data.data.token);
 
 
 			router.push('/market');
