@@ -42,7 +42,7 @@
 			console.log(error);
 		},
 	});
-	function onRegister(values: registerData) {
+	function onRegister(values: any) {
 		mutate(values);
 	}
 </script>
