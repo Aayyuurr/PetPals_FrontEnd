@@ -2,16 +2,14 @@
 	//imporation pour la validation
 	import { toFormValidator } from '@vee-validate/zod';
 	import * as zod from 'zod';
-	import { Form, useField, useForm, Field, ErrorMessage } from 'vee-validate';
+	import { Form, Field, ErrorMessage } from 'vee-validate';
+	import type { loginData } from '../api/types';
 	//importation pour le login
 	import { loginUser } from '../api/authApi';
 	import router from '../router';
 	import { useQueryClient } from 'vue-query';
 	import { useMutation, useQuery } from 'vue-query';
-	interface Ilogin {
-		email: string;
-		password: string;
-	}
+	import { authApi } from '../api/authApi';
 	// data validation
 	const validationSchema = toFormValidator(
 		zod.object({
@@ -27,9 +25,13 @@
 
 	//login function
 	const queryClient = useQueryClient();
-	const { isLoading, mutate } = useMutation((credentials: Ilogin) => loginUser(credentials), {
+	const { isLoading, mutate } = useMutation((credentials: loginData) => loginUser(credentials), {
 		onSuccess: (data) => {
-			console.log(data);
+			console.log(data.data.data.token);
+			//add token to local cookie
+			document.cookie.set('token', data.data.data.token);
+
+
 			router.push('/market');
 		},
 		onError: (error) => {

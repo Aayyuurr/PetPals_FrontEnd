@@ -1,7 +1,13 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+	import RegisterForm from '@/components/registerForm.vue';
+</script>
 
 <template>
-	<h1>register</h1>
+	<div>
+		<div>
+			<RegisterForm />
+		</div>
+	</div>
 </template>
 
 <style lang="scss" scoped></style>
