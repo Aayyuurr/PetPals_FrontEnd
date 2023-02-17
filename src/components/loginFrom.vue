@@ -29,6 +29,7 @@
 		onSuccess: (data) => {
 			console.log(data.data.data.token);
 			//add token to local cookie
+			authApi.common.headers.Authorization = `Bearer ${data.data.data.token}`;
 			document.cookie.set('token', data.data.data.token);
 
 

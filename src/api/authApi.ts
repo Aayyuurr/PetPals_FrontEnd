@@ -28,7 +28,7 @@ export const getCSRFToken = async () => {
 //login function
 export const loginUser = async (user: loginData) => {
 	//get CSRF token from csrf-cookie and give it to the login request
-	await getCSRFToken();
+	// await getCSRFToken();
 	const data=await authApi.post<loginData>('auth/login', user);
 
 	return data;
