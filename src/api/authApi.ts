@@ -7,7 +7,7 @@ const basUrl = 'https://api.pet-pals.site/api/';
 export const authApi = axios.create({
 	baseURL: basUrl,
 	timeout: 10000,
-	// withCredentials: true,
+	withCredentials: true,
 });
 authApi.defaults.headers.common['Content-Type'] = 'application/json';
 authApi.defaults.headers.common['Accept'] = 'application/json';
