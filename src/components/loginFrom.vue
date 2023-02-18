@@ -19,9 +19,9 @@
 		})
 	);
 	//get user
-	const GetUser =useQuery('user',()=>getUser(),{
+	const GetUser = useQuery('user', () => getUser(), {
 		enabled: false,
-		retry:1,
+		retry: 1,
 		onSuccess: (data) => {
 			console.log(data);
 		},
@@ -30,14 +30,15 @@
 		},
 	});
 
-
 	//login function
 	const queryClient = useQueryClient();
 	const { isLoading, mutate } = useMutation((credentials: loginData) => loginUser(credentials), {
 		onSuccess: (data) => {
+			console.log(data?.data?.data?.token);
+			authApi.defaults.headers.common['Authorization'] = `Bearer ${data?.data?.data?.token}`;
+			const te = queryClient.refetchQueries('user');
 
-
-
+			console.log(te);
 			router.push('/market');
 		},
 		onError: (error) => {
@@ -45,7 +46,7 @@
 		},
 	});
 
-	function onConnextion(values:any) {
+	function onConnextion(values: any) {
 		mutate(values);
 	}
 </script>

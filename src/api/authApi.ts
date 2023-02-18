@@ -1,5 +1,5 @@
 import axios from 'axios';
-import type { loginData, registerData } from './types';
+import type { loginData, registerData, loginResponse, registerResponse , userResponse } from './types';
 
 
 const basUrl = 'https://api.pet-pals.site/api/';
@@ -29,7 +29,7 @@ export const getCSRFToken = async () => {
 export const loginUser = async (user: loginData) => {
 	//get CSRF token from csrf-cookie and give it to the login request
 	await getCSRFToken();
-	const data=await authApi.post('auth/login', user);
+	const data=await authApi.post<loginResponse>('auth/login', user);
 
 	return data;
 
@@ -49,14 +49,13 @@ export const googleLoginUser = async () => {
 //register function
 export const registerUser = async (user: registerData) => {
 	await getCSRFToken();
-	const data=await authApi.post('auth/register', user);
+	const data=await authApi.post<registerResponse>('auth/register', user);
 
 	return data;
 
 }
 
 export const getUser = async () => {
-	const data=await authApi.get('user');
+	const data=await authApi.get<userResponse>('user');
 	return data;
-
 }
