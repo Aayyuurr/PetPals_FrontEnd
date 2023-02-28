@@ -34,5 +34,6 @@ export const fr = {
 		singUpHere: 'Créer un compte',
 		forgotPassword: 'Mot de passe oublié ?',
 		Login: 'Se connecter',
+		error: 'Votre email ou mot de passe est incorrect',
 	},
 };

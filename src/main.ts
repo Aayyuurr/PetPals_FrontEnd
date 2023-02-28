@@ -11,6 +11,7 @@ import { en } from '@/languages/english';
 import { fr } from '@/languages/french';
 
 import './assets/main.css';
+// import * as path from 'path';
 
 export const i18n = createI18n({
 	locale: 'fr',
@@ -28,4 +29,5 @@ app.use(router);
 app.use(VueQueryPlugin);
 app.use(i18n);
 app.use(MotionPlugin);
+
 app.mount('#app');

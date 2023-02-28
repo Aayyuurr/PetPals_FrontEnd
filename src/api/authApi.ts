@@ -14,7 +14,6 @@ authApi.defaults.headers.common['Accept'] = 'application/json';
 //get CSRF token
 export const getCSRFToken = async () => {
 	const test= await authApi.get('csrf-cookie');
-	console.log(test.headers.toString())
 	return test;
 };
 
@@ -57,5 +56,5 @@ export const registerUser = async (user: registerData) => {
 
 export const getUser = async () => {
 	const data=await authApi.get<userResponse>('user');
-	return data;
+	return data.data;
 }

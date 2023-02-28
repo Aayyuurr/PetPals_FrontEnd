@@ -34,5 +34,6 @@ export const en = {
 		singUpHere: 'Create an account',
 		forgotPassword: 'Forgot password ?',
 		Login: 'Sign in',
+		error: 'Your email or password is incorrect',
 	},
 };

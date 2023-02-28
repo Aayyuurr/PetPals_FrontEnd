@@ -20,16 +20,16 @@ export interface loginResponse {
 	};
 }
 
-
 export interface registerResponse {
 	success: boolean;
 	message: string;
 	data: object;
 }
 
-
 export interface userResponse {
 	success: boolean;
 	message: string;
-	data: object | null;
+	data: {
+		user: object;
+	} | null;
 }
