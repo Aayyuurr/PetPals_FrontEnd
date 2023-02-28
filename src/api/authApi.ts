@@ -55,6 +55,6 @@ export const registerUser = async (user: registerData) => {
 }
 
 export const getUser = async () => {
-	const data=await authApi.get<userResponse>('user');
-	return data.data;
+	const response=await authApi.get<userResponse>('user');
+	return response.data;
 }

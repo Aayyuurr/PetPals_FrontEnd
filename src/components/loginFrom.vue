@@ -7,14 +7,10 @@
 	//importation pour le login
 	import { loginUser, getUser } from '../api/authApi';
 	import router from '../router';
-	import { useQueryClient } from 'vue-query';
-	import { useMutation, useQuery } from 'vue-query';
-	import { authApi } from '../api/authApi';
-	import { onBeforeUnmount, onBeforeUpdate, onUnmounted, ref } from 'vue';
+	import { useMutation } from 'vue-query';
+	import {  ref } from 'vue';
 	//importation pour le user
 	import { useUserStore } from '@/stores/userStore';
-	import { onBeforeRouteUpdate } from 'vue-router';
-
 
 	const userStore = useUserStore();
 	// data validation
@@ -26,18 +22,15 @@
 	);
 	const errorLog = ref(0);
 	//get user
-	const client = useQueryClient();
-	const userResult= useQuery('user', ()=>getUser(),{
-		enabled: false,
-		retry: 1,
-	});
 
 	//login function
 	const { isLoading, mutate } = useMutation((credentials: loginData) => loginUser(credentials), {
 		onSuccess: (data) => {
-			client.refetchQueries('user');
-			router.push({ name: 'market' })
-
+			const df = getUser().then((res) =>{
+				const user = res?.data?.user;
+				userStore.setUser(user);
+				router.push({ name: 'market' });
+			});
 		},
 		onError: (error) => {
 			errorLog.value = 1;
@@ -46,12 +39,7 @@
 
 	function onConnextion(values: any) {
 		mutate(values);
-
 	}
-	onBeforeUpdate(() => {
-		console.log(client.getQueriesData('user'));
-		userStore.setUser(client.getQueriesData('user'));
-	});
 </script>
 
 <template>
