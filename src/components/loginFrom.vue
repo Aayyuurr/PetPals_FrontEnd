@@ -4,7 +4,6 @@
 	import * as zod from 'zod';
 	import { Form, Field, ErrorMessage } from 'vee-validate';
 	import type { loginData } from '../api/types';
-	import Cookies from 'universal-cookie';
 	//importation pour le login
 	import { loginUser, getUser } from '../api/authApi';
 	import router from '../router';
@@ -15,8 +14,8 @@
 	//importation pour le user
 	import { useUserStore } from '@/stores/userStore';
 	import { onBeforeRouteUpdate } from 'vue-router';
-	import colors from 'tailwindcss/colors';
-	import { data } from 'autoprefixer';
+
+
 	const userStore = useUserStore();
 	// data validation
 	const validationSchema = toFormValidator(
@@ -36,7 +35,6 @@
 	//login function
 	const { isLoading, mutate } = useMutation((credentials: loginData) => loginUser(credentials), {
 		onSuccess: (data) => {
-			authApi.defaults.headers.common['Authorization'] = `Bearer ${data?.data?.data?.token}`;
 			client.refetchQueries('user');
 			router.push({ name: 'market' })
 
