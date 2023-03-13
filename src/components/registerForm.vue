@@ -29,7 +29,7 @@
 					.max(255, 'Email doit être au plus 255 caractères'),
 				password: zod
 					.string()
-					.min(6, 'Mot de passe doit être au moins 6 caractères')
+					.min(8, 'Mot de passe doit être au moins 6 caractères')
 					.min(1, 'Mot de passe est requis'),
 				password_confirmation: zod.string().min(1, 'Confirmer votre mot de passe'),
 			})
@@ -42,7 +42,7 @@
 		(credentials: registerData) => registerUser(credentials),
 		{
 			onSuccess: (data) => {
-				authApi.defaults.headers.common['Authorization'] = `Bearer ${data?.data?.data?.token}`;
+				//authApi.defaults.headers.common['Authorization'] = `Bearer ${data?.data?.data?.token}`;
 
 				const df = getUser().then((res) => {
 					const user = res?.data?.user;
