@@ -1,8 +1,10 @@
-import { createRouter, createWebHistory  } from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
-
+import { useUserStore } from '@/stores/userStore';
+import middlewarePipeline from '@/router/middlewarePipeline';
+import requireAuth from '@/router/authMidelwar';
 const router = createRouter({
-	history: createWebHistory (import.meta.env.BASE_URL),
+	history: createWebHistory(import.meta.env.BASE_URL),
 	routes: [
 		{
 			path: '/',
@@ -23,8 +25,23 @@ const router = createRouter({
 			path: '/market',
 			name: 'market',
 			component: () => import('../views/MarketView.vue'),
+			meta: {
+				middleware: [requireAuth],
+			},
 		},
 	],
 });
 
+router.beforeEach((to, from, next) => {
+	const authStore = useUserStore();
+	if (!to.meta.middleware) {
+		return next();
+	}
+	const middleware = to.meta.middleware as any;
+	const context = { to, from, next, authStore };
+	return middleware[0]({
+		...context,
+		next: middlewarePipeline(context, middleware, 1),
+	});
+});
 export default router;
