@@ -3,7 +3,7 @@
 </script>
 
 <template>
-	<div class="h-screen w-screen flex flex-col items-center bg-white text-center justify-evenly md:flex-row lg:h-4/5">
+	<div class="h-screen w-screen flex flex-col items-center bg-white text-center justify-evenly md:flex-row lg:h-full ">
 		<div>
 			<dogTemp />
 		</div>

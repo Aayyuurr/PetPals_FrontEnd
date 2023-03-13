@@ -1,22 +1,16 @@
 <script setup lang="ts">
 	import FacebookLogo from '@/components/logosAndAssets/facebookLogo.vue';
 	import GoogleLogo from '@/components/logosAndAssets/googleLogo.vue';
+
 	import { googleLoginUser } from '@/api/authApi';
 	import { useMutation } from 'vue-query';
 	import { useQueryClient } from 'vue-query';
-
 	const { isLoading, mutate } = useMutation(() => googleLoginUser(), {
 		onSuccess: (data) => {
 			//popup google login window
 			console.log(data.data.data.google_redirect_link);
 			//popup google login window
-			const win=window.open(data.data.data.google_redirect_link, 'Login', 'width=500,height=600');
-
-
-			
-
-
-
+			const win = window.open(data.data.data.google_redirect_link, 'Login', 'width=500,height=600');
 		},
 	});
 	function onGoogleLogin() {

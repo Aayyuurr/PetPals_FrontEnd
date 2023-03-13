@@ -4,11 +4,11 @@
 </script>
 
 <template>
-	<div class="h-screen w-screen lg:flex lg:flex-col">
-		<div class="hidden lg:block lg:w-screen lg:h-1/5">
+	<div class="h-screen w-screen lg:flex lg:flex-col lg:flex-col lg:items-center">
+		<div class="hidden lg:block lg:w-screen lg:h-16 lg:.relative lg:z-10">
 			<changeLang />
 		</div>
-		<div class="lg:h-4/5"><RouterView /></div>
+		<div class="flex flex-grow"><RouterView /></div>
 	</div>
 </template>
 

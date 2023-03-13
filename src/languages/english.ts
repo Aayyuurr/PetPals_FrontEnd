@@ -36,4 +36,8 @@ export const en = {
 		Login: 'Sign in',
 		error: 'Your email or password is incorrect',
 	},
+	register: {
+		error: 'The email has already been taken',
+		name: 'Username',
+	}
 };

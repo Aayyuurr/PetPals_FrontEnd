@@ -5,7 +5,7 @@
 	import { Form, Field, ErrorMessage } from 'vee-validate';
 	import type { loginData } from '../api/types';
 	//importation pour le login
-	import { loginUser, getUser } from '../api/authApi';
+	import { loginUser, getUser, authApi } from '../api/authApi';
 	import router from '../router';
 	import { useMutation } from 'vue-query';
 	import {  ref } from 'vue';
@@ -26,6 +26,7 @@
 	//login function
 	const { isLoading, mutate } = useMutation((credentials: loginData) => loginUser(credentials), {
 		onSuccess: (data) => {
+			authApi.defaults.headers.common['Authorization'] = `Bearer ${data?.data?.data?.token}`;
 			const df = getUser().then((res) =>{
 				const user = res?.data?.user;
 				userStore.setUser(user);

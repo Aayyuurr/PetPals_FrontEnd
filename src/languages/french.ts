@@ -36,4 +36,9 @@ export const fr = {
 		Login: 'Se connecter',
 		error: 'Votre email ou mot de passe est incorrect',
 	},
+	register: {
+		error: "L'adresse email est déjà utilisée",
+		name: "Nom d'utilisateur",
+
+	}
 };
