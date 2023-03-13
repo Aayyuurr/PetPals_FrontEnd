@@ -33,3 +33,8 @@ export interface userResponse {
 		user: object;
 	} | null;
 }
+
+export interface logoResponse {
+	success: boolean;
+	message: string;
+}

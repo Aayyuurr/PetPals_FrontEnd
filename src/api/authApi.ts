@@ -38,7 +38,7 @@ export const loginUser = async (user: loginData) => {
 export const googleLoginUser = async () => {
 	//get CSRF token from csrf-cookie and give it to the login request
 	await getCSRFToken();
-	const data=await authApi.get('auth/google');
+	const data=await authApi.post('auth/google');
 
 	return data;
 
@@ -57,4 +57,9 @@ export const registerUser = async (user: registerData) => {
 export const getUser = async () => {
 	const response=await authApi.get<userResponse>('user');
 	return response.data;
+}
+
+export const logoutUser = async () => {
+	const response=await authApi.delete<loginResponse>('auth/logout');
+	return response;
 }
