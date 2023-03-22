@@ -266,11 +266,11 @@
 									class="relative font-clashDisplay font-semibold cursor-pointer rounded-md bg-white font-medium text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 hover:text-indigo-500"
 								>
 									<span>Upload a file</span>
-									<input id="file-upload" name="file-upload" type="file" class="sr-only" @change='allImageUploaded' />
+									<input id="file-upload" name="file-upload" type="file" class="sr-only" />
 								</label>
 								<p class="pl-1">or drag and drop</p>
 							</div>
-							<p class="text-xs text-gray-500">PNG, JPG, GIF up to 10MB {{imgg.value}}</p>
+							<p class="text-xs text-gray-500">PNG, JPG, GIF up to 10MB </p>
 						</div>
 					</div>
 				</div>
