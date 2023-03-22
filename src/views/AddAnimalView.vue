@@ -29,7 +29,6 @@
 	let selected = ref('0');
 	let query = ref('');
 
-
 	let selectedSex = ref('0');
 	let selectedDate = ref('2010-01-01');
 
@@ -57,13 +56,10 @@
 			birth_date: selectedDate.value,
 		});
 	}
-
-
-
 </script>
 
 <template>
-	<div class="test flex flex-col w-screen gap-4 h-full">
+	<div  class="test flex flex-col w-screen  h-full ">
 		<div
 			class="flex flex-row justify-between w-screen p-2 drop-shadow-sm border-b-2 lg:hidden"
 		>
@@ -73,7 +69,7 @@
 			</h1>
 		</div>
 		<!--main div-->
-		<div class="flex justify-center">
+		<div class=" fond h-screen flex justify-center pt-3">
 			<div class="flex flex-col gap-5">
 				<!--				select animal-->
 				<div class="flex">
@@ -84,7 +80,7 @@
 						<div class="flex flex-row gap-3 font-satoshi font-medium text-center mt-3">
 							<RadioGroupOption as="template" value="0" v-slot="{ active, checked }">
 								<div
-									:class="[active ? 'bg-green-400' : '', checked ? 'bg-red-400' : 'bg-white']"
+									:class="[active ? 'bg-pink-400' : '', checked ? 'bg-pink-400' : 'bg-white']"
 									class="w-28 h-28 rounded-2xl flex items-center justify-center cursor-pointer drop-shadow-md"
 								>
 									<div class="flex flex-col">
@@ -110,7 +106,7 @@
 
 							<RadioGroupOption as="template" value="1" v-slot="{ active, checked }">
 								<div
-									:class="[active ? 'bg-green-400' : '', checked ? 'bg-red-400' : 'bg-white']"
+									:class="[active ? 'bg-pink-400' : '', checked ? 'bg-pink-400' : 'bg-white']"
 									class="w-28 h-28 rounded-2xl cursor-pointer flex items-center justify-center drop-shadow-md"
 								>
 									<div class="flex flex-col">
@@ -136,7 +132,7 @@
 
 							<RadioGroupOption as="template" value="2" v-slot="{ active, checked }">
 								<div
-									:class="[active ? 'bg-green-400' : '', checked ? 'bg-red-400' : 'bg-white']"
+									:class="[active ? 'bg-pink-400' : '', checked ? 'bg-pink-400' : 'bg-white']"
 									class="w-28 h-28 rounded-2xl flex cursor-pointer items-center justify-center drop-shadow-md"
 								>
 									<div class="flex flex-col">
@@ -171,7 +167,7 @@
 						<div class="flex flex-row gap-3 font-satoshi font-medium text-center mt-3">
 							<RadioGroupOption as="template" value="0" v-slot="{ active, checked }">
 								<div
-									:class="[active ? 'bg-green-400' : '', checked ? 'bg-red-400' : 'bg-white']"
+									:class="[active ? 'bg-pink-400' : '', checked ? 'bg-pink-400' : 'bg-white']"
 									class="w-28 h-28 rounded-2xl flex items-center justify-center cursor-pointer drop-shadow-md"
 								>
 									<div class="flex flex-col">
@@ -196,7 +192,7 @@
 							</RadioGroupOption>
 							<RadioGroupOption as="template" value="1" v-slot="{ active, checked }">
 								<div
-									:class="[active ? 'bg-green-400' : '', checked ? 'bg-red-400' : 'bg-white']"
+									:class="[active ? 'bg-pink-400' : '', checked ? 'bg-pink-400' : 'bg-white']"
 									class="w-28 h-28 rounded-2xl flex items-center justify-center cursor-pointer drop-shadow-md"
 								>
 									<div class="flex flex-col">
@@ -224,7 +220,10 @@
 				</div>
 				<!--select date-->
 				<div>
-					<label for="date" class="block  font-medium leading-6 text-gray-900 font-clashDisplay font-semibold">
+					<label
+						for="date"
+						class="block font-medium leading-6 text-gray-900 font-clashDisplay font-semibold"
+					>
 						{{ $t('register.date') }}
 					</label>
 					<div class="mt-1 relative rounded-md drop-shadow-md">
@@ -232,16 +231,17 @@
 							type="date"
 							name="date"
 							id="date"
-							class="form-input block w-full h-14 border-0 text-center text-2xl sm:leading-5 rounded-md border-1"
+							class="mt-3 form-input block w-full pb-4 pt-4 border-0 text-center text-2xl sm:leading-5 rounded-md border-1"
 							v-model="selectedDate"
 						/>
 					</div>
 				</div>
 				<!--select photo-->
 				<div>
-					<label class="block font-medium leading-6 text-gray-900 font-clashDisplay font-semibold" >{{
-						$t('register.photo')
-					}}</label>
+					<label
+						class="block font-medium leading-6 text-gray-900 font-clashDisplay font-semibold"
+						>{{ $t('register.photo') }}</label
+					>
 					<div
 						class="mt-2 flex justify-center rounded-md border-2 border-dashed border-gray-300 px-6 pt-5 pb-6"
 					>
@@ -270,14 +270,14 @@
 								</label>
 								<p class="pl-1">or drag and drop</p>
 							</div>
-							<p class="text-xs text-gray-500">PNG, JPG, GIF up to 10MB </p>
+							<p class="text-xs text-gray-500">PNG, JPG, GIF up to 10MB</p>
 						</div>
 					</div>
 				</div>
 				<div>
 					<button
 						@click="regsi"
-						class="font-clashDisplay font-semibold w-full h-10 bg-red-200 flex mt-3 justify-center items-center rounded-lg drop-shadow-md lg:w-80 lg:h-10 md:hover:bg-red-300 md:transition md:duration-500 md:ease-in-out md:delay-150 md:hover:-translate-y-1 md:hover:scale-110"
+						class="font-clashDisplay font-semibold w-full h-16 bg-red-200 flex mt-3 justify-center items-center rounded-lg drop-shadow-md lg:w-80 lg:h-10 md:hover:bg-red-300 md:transition md:duration-500 md:ease-in-out md:delay-150 md:hover:-translate-y-1 md:hover:scale-110"
 					>
 						{{ $t('register.suivant') }}
 					</button>
@@ -287,4 +287,11 @@
 	</div>
 </template>
 
-<style lang="scss" scoped></style>
+<style scoped>
+	.fond {
+		filter: contrast(100%) brightness(100%);
+		background:
+		linear-gradient(189deg, rgba(241,126,184,1), rgba(0,0,0,0)),
+			url("@/assets/noise.svg");
+	}
+</style>

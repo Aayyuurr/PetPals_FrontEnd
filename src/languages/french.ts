@@ -44,7 +44,7 @@ export const fr = {
 		chien: 'Chien',
 		oiseau: 'Oiseau',
 		male: 'Male',
-		female: 'Femalle',
+		female: 'Femelle',
 		sex:'Selectionnez le genre de votre animal',
 		date:'Date de naissance de votre animal',
 		photo:'Ajouter des photos de votre animal',
