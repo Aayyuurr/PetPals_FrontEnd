@@ -39,5 +39,15 @@ export const en = {
 	register: {
 		error: 'The email has already been taken',
 		name: 'Username',
+		animal: 'Select your animal',
+		chat: 'Cat',
+		chien: 'Dog',
+		oiseau: 'Bird',
+		male: 'Male',
+		female: 'Female',
+		sex:'Select the gender of your animal',
+		date:'Select birth date of your animal',
+		photo: 'Upload photos of your animal',
+		suivant: 'Next',
 	}
 };

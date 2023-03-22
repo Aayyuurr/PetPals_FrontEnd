@@ -2,19 +2,79 @@
 	import FacebookLogo from '@/components/logosAndAssets/facebookLogo.vue';
 	import GoogleLogo from '@/components/logosAndAssets/googleLogo.vue';
 
-	import { googleLoginUser } from '@/api/authApi';
-	import { useMutation } from 'vue-query';
-	import { useQueryClient } from 'vue-query';
-	const { isLoading, mutate } = useMutation(() => googleLoginUser(), {
-		onSuccess: (data) => {
-			//popup google login window
-			console.log(data.data.data.google_redirect_link);
-			//popup google login window
-			const win = window.open(data.data.data.google_redirect_link, 'Login', 'width=500,height=600');
-		},
-	});
-	function onGoogleLogin() {
-		mutate();
+/*	async function onGoogleLogin() {
+		// Load the Google OAuth2 API client
+		await gapi.load('auth2', () => {
+			gapi.auth2.init({
+				client_id: '549298079364-kvu65e3kv4edsbdqj76jv8fcq92va8un.apps.googleusercontent.com',
+			});
+		});
+
+		// Open the Google OAuth2 consent screen in a popup window
+		const params = new URLSearchParams({
+			client_id: '549298079364-kvu65e3kv4edsbdqj76jv8fcq92va8un.apps.googleusercontent.com',
+			redirect_uri: 'http://127.0.0.1:5173/market',
+			reponse_type: 'token id_token',
+			scope: 'openid email profile',
+		});
+		const consentUrl = `https://accounts.google.com/o/oauth2/v2/auth?${params}`;
+		const consentWindow = window.open(
+			consentUrl,
+			'google_oauth2_consent',
+			'width=500,height=600'
+		);
+
+		// Wait for the user to complete the OAuth2 flow and return to the redirect URI
+		const redirectUri = 'http://127.0.0.1:5173/market';
+		const authResult = await new Promise((resolve, reject) => {
+			window.addEventListener('message', (event) => {
+				if (
+					event.origin === window.location.origin &&
+					event.source === consentWindow &&
+					event.data.type === 'oauth2_result' &&
+					event.data.redirect_uri === redirectUri
+				) {
+					resolve(event.data.auth_result);
+					consentWindow.close();
+				}
+			});
+		});
+
+		// Handle successful authentication
+		const accessToken = authResult.access_token;
+		const idToken = authResult.id_token;
+		// handle successful authentication
+	}*/
+
+/*	function onGoogleLogin() {
+		window.onload = function () {
+			google.accounts.id.initialize({
+				client_id: '549298079364-kvu65e3kv4edsbdqj76jv8fcq92va8un.apps.googleusercontent.com',
+				callback: handleCredentialResponse,
+			});
+			google.accounts.id.prompt();
+		};
+	}*/
+
+
+	async function onGoogleLogin() {
+		// Initialize the Google Sign-In API client
+		await gapi.load('auth2', () => {
+			gapi.auth2.init({
+				client_id: '549298079364-kvu65e3kv4edsbdqj76jv8fcq92va8un.apps.googleusercontent.com',
+			});
+		});
+
+		// Sign in the user with the Google Sign-In API
+		const auth = gapi.auth2.getAuthInstance();
+		try {
+			const googleUser = await auth.signIn();
+			const idToken = await googleUser.getAuthResponse().id_token;
+			console.log(idToken)
+			// handle successful authentication
+		} catch (error) {
+			// handle authentication error
+		}
 	}
 </script>
 

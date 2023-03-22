@@ -39,6 +39,15 @@ export const fr = {
 	register: {
 		error: "L'adresse email est déjà utilisée",
 		name: "Nom d'utilisateur",
-
+		animal: 'Selectionnez votre animal',
+		chat: 'Chat',
+		chien: 'Chien',
+		oiseau: 'Oiseau',
+		male: 'Male',
+		female: 'Femalle',
+		sex:'Selectionnez le genre de votre animal',
+		date:'Date de naissance de votre animal',
+		photo:'Ajouter des photos de votre animal',
+		suivant:'Suivant',
 	}
 };

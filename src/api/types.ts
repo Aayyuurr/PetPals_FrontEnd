@@ -38,3 +38,15 @@ export interface logoResponse {
 	success: boolean;
 	message: string;
 }
+export interface useRegisterPet{
+	type: boolean;
+	sex: boolean;
+	birth_date: string;
+
+}
+
+export interface registerPetResponse {
+	success: boolean;
+	message: string;
+	data: object;
+}

@@ -1,5 +1,13 @@
 import axios from 'axios';
-import type { loginData, registerData, loginResponse, registerResponse , userResponse } from './types';
+import type {
+	loginData,
+	registerData,
+	loginResponse,
+	registerResponse,
+	userResponse,
+	useRegisterPet,
+	registerPetResponse,
+} from './types';
 
 
 const basUrl = 'https://api.pet-pals.site/api/';
@@ -62,4 +70,10 @@ export const getUser = async () => {
 export const logoutUser = async () => {
 	const response=await authApi.delete<loginResponse>('auth/logout');
 	return response;
+}
+
+//Register pet
+export const registerPet = async (pet: useRegisterPet) => {
+	const response=await authApi.post<registerPetResponse>('pet/register', pet);
+	return response.data;
 }

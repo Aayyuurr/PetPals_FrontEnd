@@ -47,7 +47,7 @@
 				const df = getUser().then((res) => {
 					const user = res?.data?.user;
 					userStore.setUser(user);
-					router.push({ name: 'market' });
+					router.push({ name: 'addAnimal' });
 				});
 			},
 			onError :(error)=>{

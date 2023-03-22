@@ -29,6 +29,14 @@ const router = createRouter({
 				middleware: [requireAuth],
 			},
 		},
+		{
+			path: '/addanimal',
+			name: 'addAnimal',
+			component: () => import('../views/AddAnimalView.vue'),
+			// meta: {
+			// 	middleware: [requireAuth],
+			// }
+		}
 	],
 });
 
