@@ -37,7 +37,6 @@
 			errorLog.value = 1;
 		},
 	});
-
 	function onConnextion(values: any) {
 		mutate(values);
 	}
