@@ -57,7 +57,7 @@
 	}*/
 
 
-	async function onGoogleLogin() {
+/*	async function onGoogleLogin() {
 		// Initialize the Google Sign-In API client
 		await gapi.load('auth2', () => {
 			gapi.auth2.init({
@@ -75,7 +75,7 @@
 		} catch (error) {
 			// handle authentication error
 		}
-	}
+	}*/
 </script>
 
 <template>
