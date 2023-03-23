@@ -291,7 +291,7 @@
 	.fond {
 		filter: contrast(100%) brightness(100%);
 		background:
-		linear-gradient(189deg, rgba(241,126,184,1), rgba(0,0,0,0)),
+			linear-gradient(0deg, rgba(188,240,218,1), rgba(0,0,0,0)),
 			url("@/assets/noise.svg");
 	}
 </style>
